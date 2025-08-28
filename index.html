@@ -14,7 +14,7 @@
   <!-- Descripción breve para SEO y redes -->
   <meta name="description" content="Streaming Casting: la mejor experiencia de transmisión y casting en vivo.">
 
-  <!-- Open Graph para Facebook, LinkedIn, etc. -->
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
   <meta property="og:title" content="Streaming Casting">
   <meta property="og:description" content="Streaming Casting: la mejor experiencia de transmisión y casting en vivo.">
   <meta property="og:image" content="https://tusitio.com/ruta/imagen-preview.jpg">
@@ -26,6 +26,14 @@
   <meta name="twitter:title" content="Streaming Casting">
   <meta name="twitter:description" content="Streaming Casting: la mejor experiencia de transmisión y casting en vivo.">
   <meta name="twitter:image" content="https://tusitio.com/ruta/imagen-preview.jpg">
+
+  <!-- 
+    RECOMENDACIONES PARA GITHUB:
+    1. Coloca tus imágenes banner1.jpg, banner2.jpg y banner3.jpg en la MISMA CARPETA que este index.html.
+    2. Asegúrate que cada archivo pese entre 150 KB y 300 KB y mida hasta 1600 px de ancho.
+    3. Usa TinyJPG o Squoosh para comprimir sin perder calidad.
+    4. Mantén exactamente estos nombres (minúsculas y .jpg) para que el carrusel funcione.
+  -->
 
   <style>
     body {
@@ -50,7 +58,7 @@
       margin: 0.5rem 0 0;
     }
 
-    /* Banner con slides */
+    /* Carrusel dinámico */
     .banner {
       position: relative;
       width: 100%;
@@ -124,40 +132,35 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Streaming Casting</h1>
     <p>Tu puente al éxito en el mundo del streaming 🎬</p>
   </header>
 
-  <!-- Banner dinámico -->
+  <!-- Carrusel de imágenes -->
   <div class="banner">
     <div class="slide active" style="background-image: url('banner1.jpg');"></div>
-    <div class="slide" style="background-image: url('banner2.jpg');"></div>
-    <div class="slide" style="background-image: url('banner3.jpg');"></div>
+    <div class="slide"       style="background-image: url('banner2.jpg');"></div>
+    <div class="slide"       style="background-image: url('banner3.jpg');"></div>
   </div>
 
   <section class="about">
     <h2>¿Qué es Streaming Casting?</h2>
-    <p>
-      Conectamos talentos y equipos de streaming con productoras y empresas contratantes.
-    </p>
+    <p>Conectamos talentos y equipos de streaming con productoras y empresas contratantes.</p>
   </section>
 
   <section class="cta-container">
     <div class="cta">
       <h2>Convocatoria Abierta</h2>
-      <p>
-        Buscamos talentos y equipos de streaming: streamers, cámaras, editores, sonido, diseño, producción y más.
-      </p>
+      <p>Buscamos streamers, cámaras, editores, sonido, diseño, producción y más.</p>
       <a href="mailto:demos@streamingcasting.com">Enviá tu demo</a>
     </div>
 
     <div class="cta">
       <h2>Productoras y Empresas</h2>
-      <p>
-        ¿Buscás talentos y equipos de streaming?
-      </p>
+      <p>¿Buscás talentos y equipos de streaming?</p>
       <a href="mailto:info@streamingcasting.com">Escríbenos</a>
     </div>
   </section>
@@ -165,10 +168,11 @@
   <footer>
     <p>© 2025 Streaming Casting</p>
     <div class="whatsapp">
-      <a href="https://wa.me/5493416857632" target="_blank">💬 WhatsApp</a>
+      <a href="https://wa.me/5491112345678" target="_blank">💬 WhatsApp</a>
     </div>
   </footer>
 
+  <!-- Script para la rotación automática del carrusel -->
   <script>
     let slides = document.querySelectorAll('.banner .slide');
     let currentIndex = 0;
