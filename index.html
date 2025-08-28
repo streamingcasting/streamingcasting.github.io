@@ -2,189 +2,149 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="Content-Language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Título fijo -->
   <title>Streaming Casting</title>
-
-  <!-- Evitar traducción automática -->
-  <meta name="google" content="notranslate">
-
-  <!-- Descripción breve para SEO y redes -->
-  <meta name="description" content="Streaming Casting: la mejor experiencia de transmisión y casting en vivo.">
-
-  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
-  <meta property="og:title" content="Streaming Casting">
-  <meta property="og:description" content="Streaming Casting: la mejor experiencia de transmisión y casting en vivo.">
-  <meta property="og:image" content="https://tusitio.com/ruta/imagen-preview.jpg">
-  <meta property="og:url" content="https://tusitio.com/">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Streaming Casting">
-  <meta name="twitter:description" content="Streaming Casting: la mejor experiencia de transmisión y casting en vivo.">
-  <meta name="twitter:image" content="https://tusitio.com/ruta/imagen-preview.jpg">
-
-  <!-- 
-    RECOMENDACIONES PARA GITHUB:
-    1. Coloca tus imágenes banner1.jpg, banner2.jpg y banner3.jpg en la MISMA CARPETA que este index.html.
-    2. Asegúrate que cada archivo pese entre 150 KB y 300 KB y mida hasta 1600 px de ancho.
-    3. Usa TinyJPG o Squoosh para comprimir sin perder calidad.
-    4. Mantén exactamente estos nombres (minúsculas y .jpg) para que el carrusel funcione.
-  -->
-
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      background-color: #0d1b2a;
+      color: white;
       text-align: center;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #007BFF; /* Azul */
-      color: #fff;
-      padding: 2rem 1rem;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin: 0.5rem 0 0;
     }
 
-    /* Carrusel dinámico */
-    .banner {
+    header {
+      background-color: #1b263b;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #00aaff;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.2rem;
+    }
+
+    /* Carrusel */
+    .carousel {
       position: relative;
       width: 100%;
-      height: 300px;
+      max-width: 1200px;
+      height: 400px;
+      margin: 20px auto;
       overflow: hidden;
+      border-radius: 10px;
     }
-    .banner .slide {
+
+    .slide {
       position: absolute;
       width: 100%;
       height: 100%;
-      background-position: center;
       background-size: cover;
+      background-position: center;
       opacity: 0;
       transition: opacity 1s ease-in-out;
     }
-    .banner .slide.active {
+
+    .slide.active {
       opacity: 1;
     }
 
-    .about {
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: auto;
+    main {
+      padding: 20px;
     }
-    .cta-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin: 2rem 0;
-    }
+
     .cta {
-      background: #fff;
-      padding: 1.5rem;
+      background-color: #1b263b;
+      margin: 20px auto;
+      padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      width: 300px;
+      max-width: 600px;
     }
+
     .cta h2 {
-      margin-top: 0;
-      color: #111;
+      color: #00aaff;
     }
-    .cta p {
-      font-size: 1rem;
-    }
+
     .cta a {
       display: inline-block;
-      margin-top: 1rem;
-      padding: 0.8rem 1.2rem;
-      background: #007BFF;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    footer {
-      background: #111;
-      color: #fff;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-    .whatsapp {
-      margin-top: 1rem;
-    }
-    .whatsapp a {
-      background: #25D366;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #00aaff;
       color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 5px;
       text-decoration: none;
-      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .cta a:hover {
+      background-color: #0077cc;
+    }
+
+    footer {
+      background-color: #1b263b;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #00aaff;
+      text-decoration: none;
+      font-size: 1.2rem;
     }
   </style>
 </head>
-
 <body>
   <header>
     <h1>Streaming Casting</h1>
     <p>Tu puente al éxito en el mundo del streaming 🎬</p>
   </header>
 
-  <!-- Carrusel de imágenes -->
-  <div class="banner">
-    <div class="slide active" style="background-image: url('banner1.jpg');"></div>
-    <div class="slide"       style="background-image: url('banner2.jpg');"></div>
-    <div class="slide"       style="background-image: url('banner3.jpg');"></div>
+  <!-- Carrusel dinámico -->
+  <div class="carousel">
+    <div class="slide active" style="background-image: url('banner1.jpeg');"></div>
+    <div class="slide" style="background-image: url('banner2.jpeg');"></div>
+    <div class="slide" style="background-image: url('banner3.jpeg');"></div>
   </div>
 
-  <section class="about">
-    <h2>¿Qué es Streaming Casting?</h2>
-    <p>Conectamos talentos y equipos de streaming con productoras y empresas contratantes.</p>
-  </section>
+  <main>
+    <p>
+      Conectamos talentos y equipos de streaming con productoras y empresas contratantes.
+    </p>
 
-  <section class="cta-container">
     <div class="cta">
-      <h2>Convocatoria Abierta</h2>
-      <p>Buscamos streamers, cámaras, editores, sonido, diseño, producción y más.</p>
+      <h2>Convocatoria abierta</h2>
+      <p>Buscamos talentos y equipos de streaming: streamers, cámaras, editores, sonido, diseño, producción y más.</p>
       <a href="mailto:demos@streamingcasting.com">Enviá tu demo</a>
     </div>
 
     <div class="cta">
-      <h2>Productoras y Empresas</h2>
-      <p>¿Buscás talentos y equipos de streaming?</p>
+      <h2>Productoras y Empresas contratantes</h2>
+      <p>¿Buscas talentos y equipos de streaming?</p>
       <a href="mailto:info@streamingcasting.com">Escríbenos</a>
     </div>
-  </section>
+  </main>
 
   <footer>
-    <p>© 2025 Streaming Casting</p>
-    <div class="whatsapp">
-      <a href="https://wa.me/5491112345678" target="_blank">💬 WhatsApp</a>
-    </div>
+    <p>📲 <a href="https://wa.me/549XXXXXXXXXX" target="_blank">Contáctanos por WhatsApp</a></p>
   </footer>
 
-  <!-- Script para la rotación automática del carrusel -->
   <script>
-    let slides = document.querySelectorAll('.banner .slide');
-    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    let index = 0;
 
-    function changeSlide() {
-      slides[currentIndex].classList.remove('active');
-      currentIndex = (currentIndex + 1) % slides.length;
-      slides[currentIndex].classList.add('active');
+    function showSlide() {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) slide.classList.add('active');
+      });
+      index = (index + 1) % slides.length;
     }
 
-    // Cambia de imagen cada 4 segundos
-    setInterval(changeSlide, 4000);
+    setInterval(showSlide, 3000); // Cambia cada 3 segundos
   </script>
 </body>
 </html>
