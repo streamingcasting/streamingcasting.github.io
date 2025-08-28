@@ -1,128 +1,79 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Streaming Casting</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #111;
-      color: #fff;
-      padding: 2rem 1rem;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin: 0.5rem 0 0;
-    }
-    .banner {
-      width: 100%;
-      height: 300px;
-      background: url("banner.jpg") center/cover no-repeat;
-    }
-    .about {
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    .cta-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin: 2rem 0;
-    }
-    .cta {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      width: 300px;
-    }
-    .cta h2 {
-      margin-top: 0;
-      color: #111;
-    }
-    .cta p {
-      font-size: 1rem;
-    }
-    .cta a {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.8rem 1.2rem;
-      background: #111;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    footer {
-      background: #111;
-      color: #fff;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-    .whatsapp {
-      margin-top: 1rem;
-    }
-    .whatsapp a {
-      background: #25D366;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1># Streaming Casting</h1>
-    <p>Tu puente al éxito en el mundo del streaming 🎬</p>
-  </header>
+import { useEffect, useState } from "react"; import { motion, AnimatePresence } from "framer-motion";
 
-  <div class="banner"></div>
+const images = [ "/banner1.jpg", "/banner2.jpg", "/banner3.jpg", ]; // 👈 subí estas imágenes a tu carpeta "public"
 
-  <section class="about">
-    <h2>¿Qué es Streaming Casting?</h2>
-    <p>
+export default function Home() { const [index, setIndex] = useState(0);
+
+// Cambiar imagen cada 4 segundos useEffect(() => { const interval = setInterval(() => { setIndex((prev) => (prev + 1) % images.length); }, 4000); return () => clearInterval(interval); }, []);
+
+return ( <div className="min-h-screen flex flex-col bg-gray-50 text-gray-900"> {/* Header */} <header className="bg-blue-600 text-white py-10 text-center"> <h1 className="text-4xl font-bold">Streaming Casting</h1> <p className="text-lg mt-2">Tu puente al éxito en el mundo del streaming 🎬</p> </header>
+
+{/* Carrusel */}
+  <div className="relative w-full h-[300px] overflow-hidden">
+    <AnimatePresence>
+      <motion.img
+        key={index}
+        src={images[index]}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1 }}
+        className="absolute w-full h-full object-cover"
+        alt="Banner streaming"
+      />
+    </AnimatePresence>
+  </div>
+
+  {/* About */}
+  <section className="max-w-3xl mx-auto py-10 px-4 text-center">
+    <h2 className="text-2xl font-semibold mb-4">¿Qué es Streaming Casting?</h2>
+    <p className="text-lg">
       Conectamos talentos y equipos de streaming con productoras y empresas contratantes.
     </p>
   </section>
 
-  <section class="cta-container">
-    <div class="cta">
-      <h2>Convocatoria Abierta</h2>
+  {/* Call to Action */}
+  <section className="flex flex-col md:flex-row gap-6 justify-center px-4 mb-10">
+    <div className="bg-white shadow-lg rounded-2xl p-6 w-full md:w-80">
+      <h2 className="text-xl font-semibold mb-2">Convocatoria Abierta</h2>
       <p>
         Buscamos talentos y equipos de streaming: streamers, cámaras, editores, sonido, diseño, producción y más.
       </p>
-      <a href="mailto:demos@streamingcasting.com">Enviá tu demo</a>
+      <a
+        href="mailto:demos@streamingcasting.com"
+        className="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700"
+      >
+        Enviá tu demo
+      </a>
     </div>
 
-    <div class="cta">
-      <h2>Productoras y Empresas contratantes</h2>
-      <p>
-        ¿Buscás talentos y equipos de streaming?
-      </p>
-      <a href="mailto:info@streamingcasting.com">Escríbenos</a>
+    <div className="bg-white shadow-lg rounded-2xl p-6 w-full md:w-80">
+      <h2 className="text-xl font-semibold mb-2">Productoras y Empresas</h2>
+      <p>¿Buscás talentos y equipos de streaming?</p>
+      <a
+        href="mailto:info@streamingcasting.com"
+        className="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700"
+      >
+        Escríbenos
+      </a>
     </div>
   </section>
 
-  <footer>
+  {/* Footer */}
+  <footer className="bg-gray-900 text-white py-6 text-center">
     <p>© 2025 Streaming Casting</p>
-    <div class="whatsapp">
-      <a href="https://wa.me/5493416857632" target="_blank">💬 WhatsApp</a>
+    <div className="mt-2">
+      <a
+        href="https://wa.me/5493416857632"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block bg-green-500 px-4 py-2 rounded-xl font-bold hover:bg-green-600"
+      >
+        💬 WhatsApp
+      </a>
     </div>
   </footer>
-</body>
-</html>
+</div>
+
+); }
+
