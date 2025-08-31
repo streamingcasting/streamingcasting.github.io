@@ -4,13 +4,15 @@
   <!-- Configuración básica -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- SEO -->
   <title>Streaming Casting | Tu puente al éxito en el streaming 🎬</title>
   <meta name="description" content="Conectamos talentos y equipos de streaming con productoras y empresas contratantes. Envía tu demo o contrata profesionales.">
-  <meta name="keywords" content="streaming, casting, streamers, productoras, talentos, equipos de producción, editores, cámaras, sonido, diseño, producción">
   <meta name="author" content="Streaming Casting">
   <meta name="robots" content="index, follow">
+  <meta name="language" content="es">
+  <meta name="distribution" content="global">
+  <link rel="canonical" href="https://www.streamingcasting.com/">
 
   <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
   <meta property="og:title" content="Streaming Casting | Tu puente al éxito en el streaming 🎬" />
@@ -60,6 +62,22 @@
     header p {
       margin: 5px 0 0;
       font-size: 1.2rem;
+    }
+
+    nav {
+      background-color: #0d1b2a;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #00aaff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     /* Carrusel */
@@ -117,6 +135,19 @@
       background-color: #0077cc;
     }
 
+    .coming-soon {
+      margin: 40px auto;
+      padding: 20px;
+      max-width: 700px;
+      background: #1b263b;
+      border-radius: 10px;
+    }
+
+    .coming-soon h2 {
+      font-size: 1.8rem;
+      color: #ffcc00;
+    }
+
     footer {
       background-color: #1b263b;
       padding: 20px;
@@ -136,11 +167,18 @@
     <p>Tu puente al éxito en el mundo del streaming 🎬</p>
   </header>
 
+  <!-- Menú de navegación -->
+  <nav>
+    <a href="profesionales.html">Profesionales</a>
+    <a href="empresas.html">Empresas</a>
+    <a href="indie.html">Indie</a>
+  </nav>
+
   <!-- Carrusel dinámico -->
   <div class="carousel">
-    <div class="slide active" style="background-image: url('banner1.jpg');" role="img" aria-label="Streaming profesional"></div>
-    <div class="slide" style="background-image: url('banner2.jpg');" role="img" aria-label="Talentos creativos"></div>
-    <div class="slide" style="background-image: url('banner3.jpg');" role="img" aria-label="Producción audiovisual"></div>
+    <div class="slide active" style="background-image: url('banner1.jpg');" role="img" aria-label="Streaming profesional con cámaras y producción"></div>
+    <div class="slide" style="background-image: url('banner2.jpg');" role="img" aria-label="Talentos creativos trabajando en streaming"></div>
+    <div class="slide" style="background-image: url('banner3.jpg');" role="img" aria-label="Producción audiovisual en acción"></div>
   </div>
 
   <main>
@@ -159,12 +197,19 @@
       <p>¿Buscas talentos y equipos de streaming?</p>
       <a href="mailto:info@streamingcasting.com">Escríbenos</a>
     </div>
+
+    <!-- Próximamente -->
+    <div class="coming-soon">
+      <h2>📣 Próximamente...</h2>
+      <p>Perfiles autogestionables para que profesionales, empresas e independientes puedan mostrar sus trabajos, trayectoria y formar redes de contactos.</p>
+    </div>
   </main>
 
   <footer>
     <p>📲 <a href="https://wa.me/549XXXXXXXXXX" target="_blank" rel="noopener">Contáctanos por WhatsApp</a></p>
   </footer>
 
+  <!-- Script del carrusel -->
   <script>
     const slides = document.querySelectorAll('.slide');
     let index = 0;
