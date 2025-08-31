@@ -1,98 +1,183 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Streaming Pro</title>
-  <link rel="stylesheet" href="estilos.css" />
+  <!-- Configuración básica -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO -->
+  <title>Streaming Casting | Tu puente al éxito en el streaming 🎬</title>
+  <meta name="description" content="Conectamos talentos y equipos de streaming con productoras y empresas contratantes. Envía tu demo o contrata profesionales.">
+  <meta name="keywords" content="streaming, casting, streamers, productoras, talentos, equipos de producción, editores, cámaras, sonido, diseño, producción">
+  <meta name="author" content="Streaming Casting">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+  <meta property="og:title" content="Streaming Casting | Tu puente al éxito en el streaming 🎬" />
+  <meta property="og:description" content="Conectamos talentos y equipos de streaming con productoras y empresas contratantes. Enviá tu demo o contratá profesionales." />
+  <meta property="og:image" content="https://www.streamingcasting.com/banner-miniatura.jpg" />
+  <meta property="og:url" content="https://www.streamingcasting.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Streaming Casting | Tu puente al éxito en el streaming 🎬" />
+  <meta name="twitter:description" content="Conectamos talentos y equipos de streaming con productoras y empresas contratantes." />
+  <meta name="twitter:image" content="https://www.streamingcasting.com/banner-miniatura.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://www.streamingcasting.com/favicon.ico" type="image/x-icon">
+
+  <!-- Theme color para móviles -->
+  <meta name="theme-color" content="#0d1b2a">
+
+  <!-- Performance (preload imágenes del carrusel) -->
+  <link rel="preload" as="image" href="banner1.jpg">
+  <link rel="preload" as="image" href="banner2.jpg">
+  <link rel="preload" as="image" href="banner3.jpg">
+
+  <!-- Estilos -->
   <style>
-    /* Agregado para hacerlo responsive */
-    .cta-group {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 40px;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d1b2a;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      background-color: #1b263b;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #00aaff;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.2rem;
+    }
+
+    /* Carrusel */
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      height: 400px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    main {
+      padding: 20px;
     }
 
     .cta {
-      background-color: #f5f5f5;
+      background-color: #1b263b;
+      margin: 20px auto;
       padding: 20px;
       border-radius: 10px;
-      width: 300px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 600px;
     }
 
     .cta h2 {
-      font-size: 1.2em;
-      margin-bottom: 10px;
-    }
-
-    .cta p {
-      font-size: 1em;
-      margin-bottom: 15px;
+      color: #00aaff;
     }
 
     .cta a {
       display: inline-block;
+      margin-top: 10px;
       padding: 10px 20px;
-      background-color: #333;
-      color: #fff;
+      background-color: #00aaff;
+      color: white;
       text-decoration: none;
       border-radius: 5px;
-      font-weight: bold;
     }
 
-    @media (max-width: 768px) {
-      .cta-group {
-        flex-direction: column;
-        align-items: center;
-      }
+    .cta a:hover {
+      background-color: #0077cc;
+    }
 
-      .cta {
-        width: 90%;
-      }
+    footer {
+      background-color: #1b263b;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #00aaff;
+      text-decoration: none;
+      font-size: 1.2rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Streaming Pro</h1>
+    <h1>Streaming Casting</h1>
+    <p>Tu puente al éxito en el mundo del streaming 🎬</p>
   </header>
 
-  <section class="carousel">
-    <img src="banner1.jpg" alt="Banner 1" />
-    <img src="banner2.jpg" alt="Banner 2" />
-    <img src="banner3.jpg" alt="Banner 3" />
-  </section>
+  <!-- Carrusel dinámico -->
+  <div class="carousel">
+    <div class="slide active" style="background-image: url('banner1.jpg');" role="img" aria-label="Streaming profesional"></div>
+    <div class="slide" style="background-image: url('banner2.jpg');" role="img" aria-label="Talentos creativos"></div>
+    <div class="slide" style="background-image: url('banner3.jpg');" role="img" aria-label="Producción audiovisual"></div>
+  </div>
 
   <main>
-    <p>Seleccioná tu perfil y descubrí cómo podemos ayudarte:</p>
+    <p>
+      Conectamos talentos y equipos de streaming con productoras y empresas contratantes.
+    </p>
 
-    <div class="cta-group">
-      <div class="cta">
-        <h2>🎥 Profesionales del Streaming</h2>
-        <p>Si sos técnico, operador, realizador o parte de un equipo de streaming, este espacio es para vos.</p>
-        <a href="profesionales.html">Ingresar</a>
-      </div>
+    <div class="cta">
+      <h2>Convocatoria abierta</h2>
+      <p>Buscamos talentos y equipos de streaming: streamers, cámaras, editores, sonido, diseño, producción y más.</p>
+      <a href="mailto:demos@streamingcasting.com">Enviá tu demo</a>
+    </div>
 
-      <div class="cta">
-        <h2>🏢 Productoras y Empresas</h2>
-        <p>¿Buscás talentos y equipos para transmitir tus contenidos? Conectá con profesionales verificados.</p>
-        <a href="empresas.html">Ingresar</a>
-      </div>
-
-      <div class="cta">
-        <h2>🤝 Streamers Independientes</h2>
-        <p>Si hacés streaming por tu cuenta y querés profesionalizarte o colaborar, este es tu lugar.</p>
-        <a href="indie.html">Ingresar</a>
-      </div>
+    <div class="cta">
+      <h2>Productoras y Empresas contratantes</h2>
+      <p>¿Buscas talentos y equipos de streaming?</p>
+      <a href="mailto:info@streamingcasting.com">Escríbenos</a>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Streaming Pro</p>
+    <p>📲 <a href="https://wa.me/549XXXXXXXXXX" target="_blank" rel="noopener">Contáctanos por WhatsApp</a></p>
   </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let index = 0;
+
+    function showSlide() {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) slide.classList.add('active');
+      });
+      index = (index + 1) % slides.length;
+    }
+
+    setInterval(showSlide, 3000); // Cambia cada 3 segundos
+  </script>
 </body>
 </html>
