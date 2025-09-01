@@ -14,7 +14,7 @@
   <meta name="distribution" content="global">
   <link rel="canonical" href="https://www.streamingcasting.com/">
 
-  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Streaming Casting | Tu puente al éxito en el streaming 🎬" />
   <meta property="og:description" content="Conectamos talentos y equipos de streaming con productoras y empresas contratantes. Enviá tu demo o contratá profesionales." />
   <meta property="og:image" content="https://www.streamingcasting.com/banner-miniatura.jpg" />
@@ -30,10 +30,10 @@
   <!-- Favicon -->
   <link rel="icon" href="https://www.streamingcasting.com/favicon.ico" type="image/x-icon">
 
-  <!-- Theme color para móviles -->
+  <!-- Theme color -->
   <meta name="theme-color" content="#0d1b2a">
 
-  <!-- Performance (preload imágenes del carrusel) -->
+  <!-- Preload imágenes -->
   <link rel="preload" as="image" href="banner1.jpg">
   <link rel="preload" as="image" href="banner2.jpg">
   <link rel="preload" as="image" href="banner3.jpg">
@@ -62,22 +62,6 @@
     header p {
       margin: 5px 0 0;
       font-size: 1.2rem;
-    }
-
-    nav {
-      background-color: #0d1b2a;
-      padding: 10px;
-    }
-
-    nav a {
-      color: #00aaff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
     }
 
     /* Carrusel */
@@ -109,43 +93,32 @@
       padding: 20px;
     }
 
-    .cta {
+    /* Bloques clickeables */
+    .cta, .coming-soon {
       background-color: #1b263b;
       margin: 20px auto;
       padding: 20px;
       border-radius: 10px;
       max-width: 600px;
-    }
-
-    .cta h2 {
-      color: #00aaff;
-    }
-
-    .cta a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #00aaff;
-      color: white;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+      cursor: pointer;
       text-decoration: none;
-      border-radius: 5px;
+      display: block;
+      color: inherit;
     }
 
-    .cta a:hover {
-      background-color: #0077cc;
+    .cta:hover, .coming-soon:hover {
+      transform: scale(1.03);
+      background-color: #24344d;
     }
 
-    .coming-soon {
-      margin: 40px auto;
-      padding: 20px;
-      max-width: 700px;
-      background: #1b263b;
-      border-radius: 10px;
+    /* Colores de títulos */
+    .cta h2, .coming-soon h2 {
+      margin-top: 0;
     }
 
-    .coming-soon h2 {
-      font-size: 1.8rem;
-      color: #ffcc00;
+    .highlight-title {
+      color: #ffcc00; /* amarillo intenso con leve tono naranja */
     }
 
     footer {
@@ -167,14 +140,7 @@
     <p>Tu puente al éxito en el mundo del streaming 🎬</p>
   </header>
 
-  <!-- Menú de navegación -->
-  <nav>
-    <a href="profesionales.html">Profesionales</a>
-    <a href="empresas.html">Empresas</a>
-    <a href="indie.html">Indie</a>
-  </nav>
-
-  <!-- Carrusel dinámico -->
+  <!-- Carrusel -->
   <div class="carousel">
     <div class="slide active" style="background-image: url('banner1.jpg');" role="img" aria-label="Streaming profesional con cámaras y producción"></div>
     <div class="slide" style="background-image: url('banner2.jpg');" role="img" aria-label="Talentos creativos trabajando en streaming"></div>
@@ -186,30 +152,27 @@
       Conectamos talentos y equipos de streaming con productoras y empresas contratantes.
     </p>
 
-    <div class="cta">
-      <h2>Convocatoria abierta</h2>
-      <p>Buscamos talentos y equipos de streaming: streamers, cámaras, editores, sonido, diseño, producción y más.</p>
-      <a href="mailto:demos@streamingcasting.com">Enviá tu demo</a>
-    </div>
+    <a href="profesionales.html" class="cta">
+      <h2 class="highlight-title">Convocatoria abierta</h2>
+      <p>Buscamos talentos y equipos de streaming: streamers, cámaras, editores, sonido, diseño, producción y más, para profesionales del streaming.</p>
+    </a>
 
-    <div class="cta">
-      <h2>Productoras y Empresas contratantes</h2>
-      <p>¿Buscas talentos y equipos de streaming?</p>
-      <a href="mailto:info@streamingcasting.com">Escríbenos</a>
-    </div>
+    <a href="empresas.html" class="cta">
+      <h2 class="highlight-title">Productoras y Empresas contratantes</h2>
+      <p>¿Buscas talentos y equipos de streaming? Aquí encontrarás perfiles y demos.</p>
+    </a>
 
-    <!-- Próximamente -->
-    <div class="coming-soon">
-      <h2>📣 Próximamente...</h2>
-      <p>Perfiles autogestionables para que profesionales, empresas e independientes puedan mostrar sus trabajos, trayectoria y formar redes de contactos.</p>
-    </div>
+    <a href="indie.html" class="coming-soon">
+      <h2 class="highlight-title">📣 Próximamente...</h2>
+      <p>Perfiles autogestionables para mostrar trabajos, trayectoria y crear redes de contactos.</p>
+    </a>
   </main>
 
   <footer>
     <p>📲 <a href="https://wa.me/549XXXXXXXXXX" target="_blank" rel="noopener">Contáctanos por WhatsApp</a></p>
   </footer>
 
-  <!-- Script del carrusel -->
+  <!-- Script carrusel -->
   <script>
     const slides = document.querySelectorAll('.slide');
     let index = 0;
@@ -222,7 +185,7 @@
       index = (index + 1) % slides.length;
     }
 
-    setInterval(showSlide, 3000); // Cambia cada 3 segundos
+    setInterval(showSlide, 3000);
   </script>
 </body>
 </html>
