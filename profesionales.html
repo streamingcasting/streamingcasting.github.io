@@ -64,7 +64,7 @@
 
     main {
       padding: 20px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       text-align: left;
     }
@@ -81,43 +81,45 @@
 
     h3 {
       color: #ff4500; /* naranja rojizo */
-      font-size: 1.4rem;
-      margin-top: 25px;
-      margin-bottom: 10px;
+      font-size: 1.2rem;
+      margin-top: 10px;
+      margin-bottom: 8px;
     }
 
     p {
-      font-size: 1.1rem;
-      line-height: 1.6;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* Bloques en recuadros */
+    .card {
+      background-color: #1b263b;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
     }
 
     /* Listas generales */
     ul {
-      margin: 15px 0 25px 30px;
+      margin: 10px 0 20px 20px;
       padding: 0;
     }
 
     ul li {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      margin-bottom: 12px;
-    }
-
-    /* Listas compactas (para la Guía de presentación) */
-    .compact-list li {
-      font-size: 0.95rem;   /* un poco más chico */
-      line-height: 1.5;     /* más compacto */
-      margin-bottom: 8px;   /* menos separación entre ítems */
+      font-size: 0.95rem;
+      line-height: 1.4;
+      margin-bottom: 6px;
     }
 
     /* Botones */
     .cta-link {
       display: inline-block;
-      margin: 15px 10px;
-      padding: 12px 25px;
+      margin: 12px 10px;
+      padding: 10px 20px;
       background-color: #ff6600;
       color: white;
-      font-size: 1.1rem;
+      font-size: 1rem;
       border-radius: 8px;
       text-decoration: none;
       transition: background-color 0.3s;
@@ -129,14 +131,14 @@
 
     /* Sección secundaria */
     .secondary-section {
-      margin-top: 60px;
+      margin-top: 50px;
       text-align: center;
     }
 
     .back-link {
       display: block;
-      margin-top: 30px;
-      font-size: 1rem;
+      margin-top: 20px;
+      font-size: 0.95rem;
       color: #00aaff;
       text-decoration: none;
     }
@@ -160,56 +162,60 @@
   </div>
 
   <main>
-    <!-- Primero Material Audiovisual -->
-    <h2>🎥 Material audiovisual requerido</h2>
-    <ul>
-      <li><strong>Videopresentación (1–3 min):</strong> quién eres, qué haces, experiencia y objetivos. (Ver "Guía de presentación")</li>
-      <li><strong>Video de demostración (5–10 min):</strong> muestra práctica de tu especialidad.</li>
-      <li><strong>Video performance ampliado:</strong> un video más largo (o varios cortos) mostrando tu estilo y propuesta creativa.</li>
-    </ul>
+    <!-- Material Audiovisual -->
+    <div class="card">
+      <h2>🎥 Material audiovisual requerido</h2>
+      <ul>
+        <li><strong>Videopresentación (1–3 min):</strong> quién eres, qué haces, experiencia y objetivos. (Ver "Guía de presentación")</li>
+        <li><strong>Video de demostración (5–10 min):</strong> muestra práctica de tu especialidad.</li>
+        <li><strong>Video performance ampliado:</strong> un video más largo (o varios cortos) mostrando tu estilo y propuesta creativa.</li>
+      </ul>
 
-    <!-- Botones de acción -->
-    <a href="mailto:demos@streamingcasting.com" class="cta-link">📩 Envía tu material</a>
-    <a href="https://chat.whatsapp.com/XXXXXXXXXXXX" target="_blank" rel="noopener" class="cta-link">📲 Contáctanos por WhatsApp</a>
+      <!-- Botones -->
+      <a href="mailto:demos@streamingcasting.com" class="cta-link">📩 Envía tu material</a>
+      <a href="https://chat.whatsapp.com/XXXXXXXXXXXX" target="_blank" rel="noopener" class="cta-link">📲 Contáctanos por WhatsApp</a>
 
-    <p><em>Nota: los videos e información enviados serán utilizados para generar oportunidades laborales profesionales.</em></p>
+      <p><em>Nota: los videos e información enviados serán utilizados para generar oportunidades laborales profesionales.</em></p>
+    </div>
 
-    <!-- Después Guía de presentación -->
-    <h2>📋 Guía de presentación</h2>
-    <p>
-      Para participar en nuestra <strong>convocatoria abierta</strong>, envía tu material a <strong>demos@streamingcasting.com</strong> con la siguiente información:
-    </p>
+    <!-- Guía de presentación -->
+    <div class="card">
+      <h2>📋 Guía de presentación</h2>
+      <p>
+        Para participar en nuestra <strong>convocatoria abierta</strong>, envía tu material a <strong>demos@streamingcasting.com</strong> con la siguiente información:
+      </p>
 
-    <h3>1. Información personal</h3>
-    <ul class="compact-list">
-      <li>Nombre y apellido</li>
-      <li>Edad</li>
-      <li>Nacionalidad</li>
-      <li>Número de contacto (WhatsApp u otro)</li>
-      <li>Disponibilidad horaria y lugar de residencia</li>
-    </ul>
+      <h3>👤 1. Información personal</h3>
+      <ul>
+        <li>Nombre y apellido</li>
+        <li>Edad</li>
+        <li>Nacionalidad</li>
+        <li>Número de contacto (WhatsApp u otro)</li>
+        <li>Disponibilidad horaria y lugar de residencia</li>
+      </ul>
 
-    <h3>2. Especialidades</h3>
-    <ul class="compact-list">
-      <li>Área(s) de desempeño: cámara, sonido, edición, guion, ambientación, streaming, etc.</li>
-      <li>Habilidades técnicas: programas, herramientas y equipos que dominas</li>
-    </ul>
+      <h3>🎬 2. Especialidades</h3>
+      <ul>
+        <li>Área(s) de desempeño: cámara, sonido, edición, guion, ambientación, streaming, etc.</li>
+        <li>Habilidades técnicas: programas, herramientas y equipos que dominas</li>
+      </ul>
 
-    <h3>3. Trayectoria profesional</h3>
-    <ul class="compact-list">
-      <li>Experiencia laboral previa (empresas, canales, proyectos o producciones)</li>
-      <li>Ejemplos de trabajos realizados (links a portafolio si aplica)</li>
-    </ul>
+      <h3>📂 3. Trayectoria profesional</h3>
+      <ul>
+        <li>Experiencia laboral previa (empresas, canales, proyectos o producciones)</li>
+        <li>Ejemplos de trabajos realizados (links a portafolio si aplica)</li>
+      </ul>
 
-    <h3>4. Aspiraciones</h3>
-    <ul class="compact-list">
-      <li>Áreas en las que deseas trabajar</li>
-      <li>Tipos de proyectos o empresas que te interesan</li>
-      <li>Metas a corto y largo plazo en tu carrera dentro del streaming</li>
-    </ul>
+      <h3>⭐ 4. Aspiraciones</h3>
+      <ul>
+        <li>Áreas en las que deseas trabajar</li>
+        <li>Tipos de proyectos o empresas que te interesan</li>
+        <li>Metas a corto y largo plazo en tu carrera dentro del streaming</li>
+      </ul>
+    </div>
 
-    <!-- Sección secundaria -->
-    <div class="secondary-section">
+    <!-- Comunidad -->
+    <div class="card secondary-section">
       <h2>📲 Únete a nuestra comunidad</h2>
       <p>
         Además de enviarnos tu material, puedes mantenerte al día con las novedades y oportunidades uniéndote a nuestro grupo oficial.
