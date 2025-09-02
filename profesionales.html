@@ -28,13 +28,14 @@
 
     header h1 {
       margin: 0;
-      font-size: 3rem;
+      font-size: 2.2rem; /* más chico que antes para que no se corte en móvil */
       color: #ff6600; /* naranja */
+      word-wrap: break-word;
     }
 
     header p {
       margin: 5px 0 0;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 
     /* Carrusel */
@@ -42,7 +43,7 @@
       position: relative;
       width: 100%;
       max-width: 1200px;
-      height: 350px;
+      height: 300px;
       margin: 20px auto;
       overflow: hidden;
       border-radius: 10px;
@@ -67,6 +68,16 @@
       max-width: 1000px;
       margin: auto;
       text-align: left;
+    }
+
+    /* Texto de invitación */
+    .intro-text {
+      background-color: #1b263b;
+      padding: 15px;
+      margin: 20px auto;
+      border-radius: 10px;
+      font-size: 1rem;
+      text-align: center;
     }
 
     /* Secciones principales */
@@ -107,8 +118,8 @@
     }
 
     ul li {
-      font-size: 0.95rem;
-      line-height: 1.4;
+      font-size: 0.9rem;
+      line-height: 1.3;
       margin-bottom: 6px;
     }
 
@@ -150,7 +161,7 @@
 </head>
 <body>
   <header>
-    <h1>★ PROFESIONALES DEL STREAMING ★</h1>
+    <h1>★ Streaming Casting ★</h1>
     <p>Convocatoria abierta para talentos y equipos del streaming 🎬</p>
   </header>
 
@@ -159,6 +170,11 @@
     <div class="slide active" style="background-image: url('banner1.jpg');"></div>
     <div class="slide" style="background-image: url('banner2.jpg');"></div>
     <div class="slide" style="background-image: url('banner3.jpg');"></div>
+  </div>
+
+  <!-- Texto de invitación (movido aquí) -->
+  <div class="intro-text">
+    <p>Para participar en nuestra <strong>convocatoria abierta</strong>, envía tu material a <strong>demos@streamingcasting.com</strong> con la siguiente información:</p>
   </div>
 
   <main>
@@ -181,9 +197,6 @@
     <!-- Guía de presentación -->
     <div class="card">
       <h2>📋 Guía de presentación</h2>
-      <p>
-        Para participar en nuestra <strong>convocatoria abierta</strong>, envía tu material a <strong>demos@streamingcasting.com</strong> con la siguiente información:
-      </p>
 
       <h3>👤 1. Información personal</h3>
       <ul>
