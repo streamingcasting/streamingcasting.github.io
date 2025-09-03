@@ -7,16 +7,14 @@
 
   <!-- SEO -->
   <title>Streaming Casting | Your bridge to success in streaming 🎬</title>
-  <meta name="description" content="We connect streaming professionals with production companies. Submit your demo or hire professionals.">
+  <meta name="description" content="Streaming Casting - convocatoria y red de profesionales del streaming.">
   <meta name="author" content="Streaming Casting">
   <meta name="robots" content="index, follow">
-  <meta name="language" content="en">
-  <meta name="distribution" content="global">
   <link rel="canonical" href="https://www.streamingcasting.com/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Streaming Casting | Your bridge to success in streaming 🎬" />
-  <meta property="og:description" content="We connect streaming professionals with production companies. Submit your demo or hire professionals." />
+  <meta property="og:description" content="Streaming Casting - convocatoria y red de profesionales del streaming." />
   <meta property="og:image" content="https://www.streamingcasting.com/banner-miniatura.jpg" />
   <meta property="og:url" content="https://www.streamingcasting.com/" />
   <meta property="og:type" content="website" />
@@ -24,7 +22,7 @@
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Streaming Casting | Your bridge to success in streaming 🎬" />
-  <meta name="twitter:description" content="We connect streaming professionals with production companies." />
+  <meta name="twitter:description" content="Streaming Casting - convocatoria y red de profesionales del streaming." />
   <meta name="twitter:image" content="https://www.streamingcasting.com/banner-miniatura.jpg" />
 
   <!-- Favicon -->
@@ -38,157 +36,120 @@
   <link rel="preload" as="image" href="banner2.jpg">
   <link rel="preload" as="image" href="banner3.jpg">
 
-  <!-- Styles -->
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0d1b2a;
-      color: white;
-      text-align: center;
+    :root{
+      --bg:#0d1b2a;
+      --card:#1b263b;
+      --accent:#ff6600;
+      --yellow:#ffcc00;
+      --orange:#ff4500;
+      --link:#00aaff;
+      --text:white;
     }
 
-    header {
-      background-color: #1b263b;
-      padding: 20px;
-    }
+    html,body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);text-align:center}
+    header{background:var(--card);padding:18px}
+    header h1{margin:0;font-size:1.9rem;color:var(--accent)}
+    header h1 span[translate="no"]{display:inline-block}
+    header p{margin:6px 0 0;font-size:1rem;color:#ccc}
+    header p .eslogan{display:block;color:#ddd;font-size:.95rem;margin-top:6px}
 
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-      color: #ff6600;
-    }
+    .carousel{position:relative;width:100%;max-width:1200px;height:280px;margin:18px auto;overflow:hidden;border-radius:10px}
+    .slide{position:absolute;width:100%;height:100%;background-size:cover;background-position:center;opacity:0;transition:opacity 1s ease}
+    .slide.active{opacity:1}
 
-    header p {
-      margin: 5px 0 0;
-      font-size: 1.1rem;
-    }
+    main{padding:18px}
 
-    .carousel {
-      position: relative;
-      width: 100%;
-      max-width: 1200px;
-      height: 280px; /* smaller for mobile */
-      margin: 20px auto;
-      overflow: hidden;
-      border-radius: 10px;
-    }
+    /* CONNECTIONS block (centered stars + phrase) */
+    .connections{max-width:900px;margin:12px auto 20px;padding:10px 12px;text-align:center}
+    .connections .stars{color:var(--yellow);font-size:1.4rem;line-height:1;margin:6px 0}
+    .connections .phrase{color:#fff;font-size:1.05rem;margin:6px 0;padding:0 10px}
 
-    .slide {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
+    .cta, .coming-soon{background:var(--card);margin:18px auto;padding:18px;border-radius:10px;max-width:640px;transition:transform .18s ease,background-color .2s;cursor:pointer;text-decoration:none;color:inherit;display:block;text-align:left}
+    .cta:hover, .coming-soon:hover{transform:scale(1.02);background:#24344d}
 
-    .slide.active {
-      opacity: 1;
-    }
+    .highlight-title{color:var(--yellow);font-size:1.25rem;margin:0 0 8px}
+    .sub-orange{color:var(--orange);font-size:1rem;margin:0 0 10px}
+    .cta p, .cta li{color:#fff;font-size:0.98rem;line-height:1.45}
 
-    main {
-      padding: 20px;
-    }
+    footer{background:var(--card);padding:18px;margin-top:20px}
+    footer a{color:var(--link);text-decoration:none;font-size:1.05rem}
 
-    .cta, .coming-soon {
-      background-color: #1b263b;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 600px;
-      transition: transform 0.2s ease, background-color 0.3s ease;
-      cursor: pointer;
-      text-decoration: none;
-      display: block;
-      color: inherit;
-    }
+    ul {list-style:none;padding:0;margin:6px 0}
+    ul li{margin:8px 0;text-align:left}
 
-    .cta:hover, .coming-soon:hover {
-      transform: scale(1.03);
-      background-color: #24344d;
-    }
-
-    .highlight-title {
-      color: #ffcc00; /* yellow */
-    }
-
-    .sub-orange {
-      color: #ff4500; /* orange-red */
-    }
-
-    footer {
-      background-color: #1b263b;
-      padding: 20px;
-      margin-top: 20px;
-    }
-
-    footer a {
-      color: #00aaff;
-      text-decoration: none;
-      font-size: 1.2rem;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li {
-      margin: 8px 0;
+    /* small screens */
+    @media (max-width:520px){
+      header h1{font-size:1.5rem}
+      .carousel{height:200px}
+      .connections .stars{font-size:1.1rem}
+      .connections .phrase{font-size:.98rem}
+      .highlight-title{font-size:1.1rem}
+      .sub-orange{font-size:.95rem}
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>★ Streaming casting ★</h1>
-    <p>Your bridge to success in streaming 🎬<br><span style="font-size:0.9rem; color:#ccc;">Tu puente al éxito en el mundo del streaming</span></p>
+    <!-- brand fixed (no traducir) -->
+    <h1><span translate="no">★ Streaming casting ★</span></h1>
+    <!-- mantener SOLO la versión aprobada del eslogan -->
+    <p class="eslogan">Tu puente al éxito en el mundo del streaming</p>
   </header>
 
   <!-- Carousel -->
-  <div class="carousel">
-    <div class="slide active" style="background-image: url('banner1.jpg');" role="img" aria-label="Professional streaming with cameras and production"></div>
-    <div class="slide" style="background-image: url('banner2.jpg');" role="img" aria-label="Creative talents working on streaming"></div>
-    <div class="slide" style="background-image: url('banner3.jpg');" role="img" aria-label="Audiovisual production in action"></div>
+  <div class="carousel" aria-hidden="false">
+    <div class="slide active" style="background-image:url('banner1.jpg')" role="img" aria-label="Professional streaming with cameras and production"></div>
+    <div class="slide" style="background-image:url('banner2.jpg')" role="img" aria-label="Creative talents working on streaming"></div>
+    <div class="slide" style="background-image:url('banner3.jpg')" role="img" aria-label="Audiovisual production in action"></div>
+  </div>
+
+  <!-- CONNECTIONS centered block (stars + phrase) -->
+  <div class="connections" role="note" aria-label="Conexiones estratégicas">
+    <div class="stars" aria-hidden="true">★★★★★</div>
+    <div class="phrase">Creamos conexiones estratégicas para la ejecución de proyectos de streamings profesionales</div>
+    <div class="stars" aria-hidden="true">★★★★★</div>
   </div>
 
   <main>
-    <p>We connect streaming professionals with production companies.</p>
-
-    <a href="profesionales.html" class="cta">
-      <h2 class="highlight-title">Streaming Professionals</h2>
-      <h3 class="sub-orange">Open Call</h3>
-      <p>We are looking for streamers, camera operators, video editors, sound engineers, graphic designers, producers, and more.</p>
+    <!-- Profesionales block (texto tal como pediste) -->
+    <a href="profesionales.html" class="cta" role="link" aria-label="Profesionales del streaming">
+      <h2 class="highlight-title">Profesionales del streaming</h2>
+      <h3 class="sub-orange">Convocatoria abierta</h3>
+      <p>Si eres streamer, camarógrafo, editor de video, sonidista, diseñador gráfico, escenógrafo u otro profesional del streaming, sumate aquí.</p>
     </a>
 
-    <a href="empresas.html" class="cta">
+    <!-- Empresas / contratantes block (se mantiene la idea) -->
+    <a href="empresas.html" class="cta" role="link" aria-label="Empresas y productoras">
       <h2 class="highlight-title">Production Companies & Hiring Businesses</h2>
       <p>Looking for streaming professionals and teams?</p>
       <p>Find qualified talent here.</p>
     </a>
 
-    <a href="indie.html" class="cta">
+    <!-- Indie block (texto actualizado + título como pediste) -->
+    <a href="indie.html" class="cta" role="link" aria-label="Indie - profesionales independientes">
       <h2 class="highlight-title">Indie.</h2>
-      <h3 class="sub-orange">Independent Streaming Professionals</h3>
-      <p>Looking for collaborators or joining third-party projects? This is your space.</p>
+      <h3 class="sub-orange">Profesionales independientes del streaming</h3>
+      <p>¿Buscas colaboradores para tus proyectos o unirte a proyectos de terceros? Este es tu espacio.</p>
     </a>
 
-    <a href="next.html" class="coming-soon">
+    <!-- Coming soon -->
+    <a href="next.html" class="coming-soon" role="link" aria-label="Próximamente">
       <h3 class="sub-orange">📣 Coming soon...</h3>
       <p>Self-managed profiles for:</p>
-      <ul style="text-align: left; max-width: 500px; margin: 0 auto;">
+      <ul style="max-width:500px;margin:0 auto">
         <li><strong>Talents:</strong> Streaming professionals seeking job opportunities</li>
         <li><strong>Recruiters:</strong> Production companies and businesses hiring streaming professionals</li>
         <li><strong>Indies:</strong> Independent professionals looking for strategic partnerships or freelance collaborations</li>
       </ul>
     </a>
 
-    <a href="partners.html" class="cta">
+    <!-- Join the Project block (entero táctil; va a partners.html) -->
+    <a href="partners.html" class="cta" role="link" aria-label="Join the project - partners">
       <h2 class="highlight-title">Join the Project 🏗️</h2>
       <h3 class="sub-orange">Streaming casting</h3>
       <p>We invite independent streaming professionals, investors, and companies to collaborate in the development of the active project <strong>streaming casting</strong>.</p>
-      <p style="color:#00aaff; font-weight:bold;">Become a Partner</p>
+      <p style="color:#00aaff;font-weight:bold">Become a Partner</p>
     </a>
   </main>
 
@@ -196,19 +157,14 @@
     <p>📲 <a href="https://wa.me/549XXXXXXXXXX" target="_blank" rel="noopener">Contact us on WhatsApp</a></p>
   </footer>
 
-  <!-- Carousel script -->
   <script>
+    // simple carousel rotation
     const slides = document.querySelectorAll('.slide');
     let index = 0;
-
-    function showSlide() {
-      slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === index) slide.classList.add('active');
-      });
-      index = (index + 1) % slides.length;
+    function showSlide(){
+      slides.forEach((s,i)=>s.classList.toggle('active', i===index));
+      index = (index+1) % slides.length;
     }
-
     setInterval(showSlide, 3000);
   </script>
 </body>
