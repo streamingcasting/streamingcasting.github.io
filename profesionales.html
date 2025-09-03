@@ -1,258 +1,151 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <!-- Configuración básica -->
+  <!-- Basic setup -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO -->
-  <title>Streaming Casting | Profesionales del Streaming 🎬</title>
-  <meta name="description" content="Guía de presentación para profesionales del streaming: envía tu material y participa en nuestra convocatoria abierta.">
+  <title>Streaming Casting | Professionals 🎬</title>
+  <meta name="description" content="Presentation guide for streaming professionals: send your material and join our open call.">
   <meta name="author" content="Streaming Casting">
   <link rel="canonical" href="https://www.streamingcasting.com/profesionales.html">
 
-  <!-- Estilos -->
+  <!-- Styles -->
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0d1b2a;
-      color: white;
-      text-align: center;
+    :root{
+      --bg:#0d1b2a;
+      --card:#1b263b;
+      --accent:#ff6600;
+      --yellow:#ffcc00;
+      --orange:#ff4500;
+      --link:#00aaff;
+      --text:white;
     }
 
-    header {
-      background-color: #1b263b;
-      padding: 20px;
-    }
+    html,body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);text-align:center}
+    header{background:var(--card);padding:18px}
+    header h1{margin:0;font-size:1.9rem;color:var(--accent)}
+    header h1 span[translate="no"]{display:inline-block}
+    header p{margin:6px 0 0;font-size:1rem;color:#ccc}
 
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem; /* más chico que antes para que no se corte en móvil */
-      color: #ff6600; /* naranja */
-      word-wrap: break-word;
-    }
+    .carousel{position:relative;width:100%;max-width:1200px;height:260px;margin:18px auto;overflow:hidden;border-radius:10px}
+    .slide{position:absolute;width:100%;height:100%;background-size:cover;background-position:center;opacity:0;transition:opacity 1s ease}
+    .slide.active{opacity:1}
 
-    header p {
-      margin: 5px 0 0;
-      font-size: 1.1rem;
-    }
+    main{padding:18px;max-width:1000px;margin:auto;text-align:left}
 
-    /* Carrusel */
-    .carousel {
-      position: relative;
-      width: 100%;
-      max-width: 1200px;
-      height: 300px;
-      margin: 20px auto;
-      overflow: hidden;
-      border-radius: 10px;
-    }
+    /* Intro box */
+    .intro-text{background:var(--card);padding:14px;margin:18px auto;border-radius:10px;font-size:1rem;text-align:center;color:#ddd}
 
-    .slide {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
+    /* Card sections */
+    .card{background:var(--card);border-radius:12px;padding:20px;margin:20px 0;box-shadow:0 4px 8px rgba(0,0,0,0.4)}
+    .card h2{color:var(--yellow);font-size:1.3rem;margin:0 0 12px}
+    .card h3{color:var(--orange);font-size:1.05rem;margin:10px 0 6px}
+    .card p{font-size:0.95rem;line-height:1.5;color:#eee}
 
-    .slide.active {
-      opacity: 1;
-    }
+    ul{margin:8px 0 14px 20px;padding:0}
+    ul li{font-size:0.85rem;line-height:1.3;margin-bottom:5px}
 
-    main {
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
-      text-align: left;
-    }
+    /* Buttons */
+    .cta-link{display:inline-block;margin:12px 8px;padding:10px 18px;background:var(--accent);color:#fff;font-size:0.95rem;border-radius:8px;text-decoration:none;transition:background-color .3s}
+    .cta-link:hover{background:var(--orange)}
 
-    /* Texto de invitación */
-    .intro-text {
-      background-color: #1b263b;
-      padding: 15px;
-      margin: 20px auto;
-      border-radius: 10px;
-      font-size: 1rem;
-      text-align: center;
-    }
+    .back-link{display:block;margin-top:20px;font-size:0.9rem;color:var(--link);text-decoration:none}
+    .back-link:hover{text-decoration:underline}
 
-    /* Secciones principales */
-    h2 {
-      color: #ffcc00; /* amarillo */
-      font-size: 2rem;
-      margin-top: 50px;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #ffcc00;
-      padding-bottom: 10px;
-    }
-
-    h3 {
-      color: #ff4500; /* naranja rojizo */
-      font-size: 1.2rem;
-      margin-top: 10px;
-      margin-bottom: 8px;
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-
-    /* Bloques en recuadros */
-    .card {
-      background-color: #1b263b;
-      border-radius: 12px;
-      padding: 20px;
-      margin: 20px 0;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-    }
-
-    /* Listas generales */
-    ul {
-      margin: 10px 0 20px 20px;
-      padding: 0;
-    }
-
-    ul li {
-      font-size: 0.9rem;
-      line-height: 1.3;
-      margin-bottom: 6px;
-    }
-
-    /* Botones */
-    .cta-link {
-      display: inline-block;
-      margin: 12px 10px;
-      padding: 10px 20px;
-      background-color: #ff6600;
-      color: white;
-      font-size: 1rem;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background-color 0.3s;
-    }
-
-    .cta-link:hover {
-      background-color: #ff4500;
-    }
-
-    /* Sección secundaria */
-    .secondary-section {
-      margin-top: 50px;
-      text-align: center;
-    }
-
-    .back-link {
-      display: block;
-      margin-top: 20px;
-      font-size: 0.95rem;
-      color: #00aaff;
-      text-decoration: none;
-    }
-
-    .back-link:hover {
-      text-decoration: underline;
+    /* Small screens */
+    @media (max-width:520px){
+      header h1{font-size:1.5rem}
+      .carousel{height:200px}
+      .card h2{font-size:1.15rem}
+      .card h3{font-size:1rem}
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>★ Streaming Casting ★</h1>
-    <p>Convocatoria abierta para talentos y equipos del streaming 🎬</p>
+    <!-- Brand (never translated) -->
+    <h1><span translate="no">★ Streaming Casting ★</span></h1>
+    <p>Open call for streaming talents and teams 🎬</p>
   </header>
 
-  <!-- Carrusel -->
+  <!-- Carousel -->
   <div class="carousel">
-    <div class="slide active" style="background-image: url('banner1.jpg');"></div>
-    <div class="slide" style="background-image: url('banner2.jpg');"></div>
-    <div class="slide" style="background-image: url('banner3.jpg');"></div>
+    <div class="slide active" style="background-image:url('banner1.jpg');"></div>
+    <div class="slide" style="background-image:url('banner2.jpg');"></div>
+    <div class="slide" style="background-image:url('banner3.jpg');"></div>
   </div>
 
-  <!-- Texto de invitación (movido aquí) -->
+  <!-- Intro text -->
   <div class="intro-text">
-    <p>Para participar en nuestra <strong>convocatoria abierta</strong>, envía tu material a <strong>demos@streamingcasting.com</strong> con la siguiente información:</p>
+    To participate in our <strong>open call</strong>, send your material to <strong>demos@streamingcasting.com</strong> with the following information:
   </div>
 
   <main>
-    <!-- Material Audiovisual -->
+    <!-- Audiovisual Material -->
     <div class="card">
-      <h2>🎥 Material audiovisual requerido</h2>
+      <h2>🎥 Required audiovisual material</h2>
       <ul>
-        <li><strong>Videopresentación (1–3 min):</strong> quién eres, qué haces, experiencia y objetivos. (Ver "Guía de presentación")</li>
-        <li><strong>Video de demostración (5–10 min):</strong> muestra práctica de tu especialidad.</li>
-        <li><strong>Video performance ampliado:</strong> un video más largo (o varios cortos) mostrando tu estilo y propuesta creativa.</li>
+        <li><strong>Video presentation (1–3 min):</strong> who you are, what you do, experience, and goals. (See "Presentation guide")</li>
+        <li><strong>Demo video (5–10 min):</strong> practical showcase of your specialty.</li>
+        <li><strong>Extended performance video:</strong> a longer video (or several short ones) showing your style and creative proposal.</li>
       </ul>
-
-      <!-- Botones -->
-      <a href="mailto:demos@streamingcasting.com" class="cta-link">📩 Envía tu material</a>
-      <a href="https://chat.whatsapp.com/XXXXXXXXXXXX" target="_blank" rel="noopener" class="cta-link">📲 Contáctanos por WhatsApp</a>
-
-      <p><em>Nota: los videos e información enviados serán utilizados para generar oportunidades laborales profesionales.</em></p>
+      <a href="mailto:demos@streamingcasting.com" class="cta-link">📩 Send your material</a>
+      <a href="https://chat.whatsapp.com/XXXXXXXXXXXX" target="_blank" rel="noopener" class="cta-link">📲 Contact us on WhatsApp</a>
+      <p><em>Note: submitted videos and information will be used to generate professional job opportunities.</em></p>
     </div>
 
-    <!-- Guía de presentación -->
+    <!-- Presentation guide -->
     <div class="card">
-      <h2>📋 Guía de presentación</h2>
+      <h2>📋 Presentation guide</h2>
 
-      <h3>👤 1. Información personal</h3>
+      <h3>👤 1. Personal information</h3>
       <ul>
-        <li>Nombre y apellido</li>
-        <li>Edad</li>
-        <li>Nacionalidad</li>
-        <li>Número de contacto (WhatsApp u otro)</li>
-        <li>Disponibilidad horaria y lugar de residencia</li>
+        <li>Full name</li>
+        <li>Age</li>
+        <li>Nationality</li>
+        <li>Contact number (WhatsApp or other)</li>
+        <li>Availability and place of residence</li>
       </ul>
 
-      <h3>🎬 2. Especialidades</h3>
+      <h3>🎬 2. Specialties</h3>
       <ul>
-        <li>Área(s) de desempeño: cámara, sonido, edición, guion, ambientación, streaming, etc.</li>
-        <li>Habilidades técnicas: programas, herramientas y equipos que dominas</li>
+        <li>Field(s) of expertise: camera, sound, editing, script, set design, streaming, etc.</li>
+        <li>Technical skills: software, tools, and equipment you master</li>
       </ul>
 
-      <h3>📂 3. Trayectoria profesional</h3>
+      <h3>📂 3. Professional background</h3>
       <ul>
-        <li>Experiencia laboral previa (empresas, canales, proyectos o producciones)</li>
-        <li>Ejemplos de trabajos realizados (links a portafolio si aplica)</li>
+        <li>Previous work experience (companies, channels, projects, or productions)</li>
+        <li>Examples of completed work (portfolio links if available)</li>
       </ul>
 
-      <h3>⭐ 4. Aspiraciones</h3>
+      <h3>⭐ 4. Aspirations</h3>
       <ul>
-        <li>Áreas en las que deseas trabajar</li>
-        <li>Tipos de proyectos o empresas que te interesan</li>
-        <li>Metas a corto y largo plazo en tu carrera dentro del streaming</li>
+        <li>Areas where you want to work</li>
+        <li>Types of projects or companies you are interested in</li>
+        <li>Short- and long-term goals in your streaming career</li>
       </ul>
     </div>
 
-    <!-- Comunidad -->
-    <div class="card secondary-section">
-      <h2>📲 Únete a nuestra comunidad</h2>
-      <p>
-        Además de enviarnos tu material, puedes mantenerte al día con las novedades y oportunidades uniéndote a nuestro grupo oficial.
-      </p>
-      <a href="https://chat.whatsapp.com/XXXXXXXXXXXX" target="_blank" rel="noopener" class="cta-link">
-        👉 Sumate al grupo de WhatsApp de Streaming Casting
-      </a>
-      <a href="index.html" class="back-link">⬅️ Volver al inicio</a>
+    <!-- Community -->
+    <div class="card">
+      <h2>📲 Join our community</h2>
+      <p>In addition to sending us your material, you can stay up to date with news and opportunities by joining our official group.</p>
+      <a href="https://chat.whatsapp.com/XXXXXXXXXXXX" target="_blank" rel="noopener" class="cta-link">👉 Join the WhatsApp group of Streaming Casting</a>
+      <a href="index.html" class="back-link">⬅️ Back to Home</a>
     </div>
   </main>
 
-  <!-- Script carrusel -->
+  <!-- Carousel script -->
   <script>
     const slides = document.querySelectorAll('.slide');
     let index = 0;
-
-    function showSlide() {
-      slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === index) slide.classList.add('active');
-      });
-      index = (index + 1) % slides.length;
+    function showSlide(){
+      slides.forEach((s,i)=>s.classList.toggle('active', i===index));
+      index = (index+1) % slides.length;
     }
-
     setInterval(showSlide, 3000);
   </script>
 </body>
