@@ -1,29 +1,81 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Streamers Independientes | Streaming Casting</title>
-  <style>
-    body { margin:0; font-family:Arial, sans-serif; background:#0d1b2a; color:white; text-align:center; }
-    header { background:#1b263b; padding:20px; }
-    header h1 { margin:0; color:#00aaff; }
-    main { padding:40px; }
-    .cta a { display:inline-block; margin:10px; padding:10px 20px; background:#00aaff; color:white; border-radius:5px; text-decoration:none; }
-    .cta a:hover { background:#0077cc; }
-  </style>
+  <title>Independent Streaming Professionals | Streaming Casting</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <h1>Streamers Independientes</h1>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Header -->
+  <header class="bg-gray-800 shadow-lg">
+    <div class="container mx-auto px-4 py-6 text-center">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-yellow-400">Independent Streaming Professionals</h1>
+      <p class="text-lg md:text-xl text-orange-500 mt-2">Collaborative Alliances</p>
+    </div>
   </header>
-  <main>
-    <p>¿Eres un streamer independiente con ganas de colaborar y crear proyectos propios?  
-    Aquí podrás asociarte con otros profesionales y dar vida a tus ideas.</p>
-    <div class="cta">
-      <a href="mailto:info@streamingcasting.com">📩 Contactar</a>
-      <a href="https://chat.whatsapp.com/ZZZZ" target="_blank">📲 Unirme al grupo de WhatsApp</a>
+
+  <!-- Intro -->
+  <section class="container mx-auto px-4 py-6">
+    <div class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center">
+      <p class="text-white text-lg">
+        If you have a project and are looking for collaborators, or if you want to collaborate on the projects of other professionals as equals, this space is for you.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <main class="container mx-auto px-4 py-6 grid gap-6 md:grid-cols-2">
+    <!-- Block 1: Proposal -->
+    <div class="bg-gray-800 rounded-2xl shadow-lg p-6">
+      <h2 class="text-xl font-bold text-yellow-400 mb-4">📋 Share Your Proposal</h2>
+      <p class="text-gray-300 mb-4">
+        Develop and share your proposal with us, and we will help you find the best collaborators for your project.
+      </p>
+      <p class="text-gray-300 mb-4">
+        You can send your proposal in text, audio, or video format. Please include:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-300 text-sm">
+        <li>Your idea in detail</li>
+        <li>The part you will handle yourself</li>
+        <li>The parts you want to delegate</li>
+        <li>The specialists you need</li>
+        <li>The percentage of profits you want to share with collaborators</li>
+        <li>Project start date</li>
+        <li>Project completion date</li>
+        <li>Any other relevant details</li>
+      </ul>
+    </div>
+
+    <!-- Block 2: Important Note -->
+    <div class="bg-gray-800 rounded-2xl shadow-lg p-6">
+      <h2 class="text-xl font-bold text-yellow-400 mb-4">💡 Important Note</h2>
+      <p class="text-gray-300 text-sm leading-relaxed">
+        The difference between a <span class="font-semibold">streaming professional</span> 
+        and an <span class="font-semibold">independent streaming professional</span> is in how they are compensated:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-300 text-sm mt-3">
+        <li><span class="font-semibold">Professional:</span> charges for their services directly, with guaranteed payment.</li>
+        <li><span class="font-semibold">Independent:</span> invests their expertise or capital in the project as a bet. If the project succeeds, they earn a percentage of the profits. If not, they don’t get paid.</li>
+      </ul>
     </div>
   </main>
+
+  <!-- Action buttons -->
+  <section class="container mx-auto px-4 py-6 text-center space-x-4">
+    <a href="mailto:demos@streamingcasting.com" 
+       class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded-lg shadow-md inline-block mb-4">
+       Send your proposal to demos@streamingcasting.com
+    </a>
+    <a href="https://wa.me/" target="_blank"
+       class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg shadow-md inline-block mb-4">
+       📲 Contact us on WhatsApp
+    </a>
+  </section>
+
+  <!-- Back to home -->
+  <footer class="bg-gray-800 py-6 text-center">
+    <a href="index.html" class="text-orange-500 hover:underline">⬅ Back to Home</a>
+  </footer>
 </body>
 </html>
