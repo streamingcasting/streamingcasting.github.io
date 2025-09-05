@@ -1,127 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hiring Companies & Production Houses</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #0d0d0d;
-      color: #f2f2f2;
-      line-height: 1.6;
-    }
-    header {
-      background: #1c1c1c;
-      padding: 1rem;
-      border-bottom: 2px solid #444;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0.5rem 0;
-      font-size: 1.8rem;
-      color: #ffcc00;
-    }
-    nav {
-      margin-top: 0.5rem;
-    }
-    nav a {
-      color: #f2f2f2;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
-    }
-    nav a:hover {
-      color: #ffcc00;
-    }
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #ffcc00;
-      margin-top: 1.5rem;
-    }
-    h3 {
-      color: #ff6600;
-      margin-top: 1rem;
-    }
-    p {
-      color: #ffffff;
-    }
-    ul {
-      margin: 1rem 0;
-      padding-left: 1.5rem;
-    }
-    li {
-      margin-bottom: 0.5rem;
-    }
-    a.button {
-      display: inline-block;
-      margin: 1rem 0.5rem 0 0;
-      padding: 0.7rem 1.2rem;
-      background: #ffcc00;
-      color: #0d0d0d;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-      transition: background 0.3s ease;
-    }
-    a.button:hover {
-      background: #e6b800;
-    }
-    footer {
-      background: #1c1c1c;
-      text-align: center;
-      padding: 1rem;
-      border-top: 2px solid #444;
-      font-size: 0.9rem;
-      margin-top: 2rem;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hiring Companies & Production Houses | Streaming Casting</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <h1>Hiring Companies & Production Houses</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="profesionales.html">Professionals</a>
-      <a href="indie.html">Independent Professionals</a>
-      <a href="empresas.html">Companies</a>
-    </nav>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Header -->
+  <header class="bg-gray-800 shadow-lg">
+    <div class="container mx-auto px-4 py-6 text-center">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-yellow-400">Hiring Companies & Production Houses</h1>
+      <p class="text-lg md:text-xl text-orange-500 mt-2">Find the Best Streaming Professionals</p>
+    </div>
   </header>
 
-  <main>
-    <h2>Companies & Producers</h2>
-    <h3>Looking for talents and streaming teams?</h3>
-    <p>
-      Here we connect you with the most qualified streaming professionals — from actors, streamers, show hosts and entertainers to video editors, production crews, camera operators, sound engineers, set designers, and much more.
-    </p>
-    <p>
-      Send us your request with as much detail as possible and we will quickly connect you with the most suitable professionals for your project.
-    </p>
+  <!-- Intro -->
+  <section class="container mx-auto px-4 py-6">
+    <div class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center">
+      <p class="text-white text-lg">
+        Are you looking for talents and streaming teams?  
+        Here we connect you with the most qualified streaming professionals — from actors, streamers, show hosts and entertainers to editors, producers, camera operators, sound engineers, set designers, and much more.
+      </p>
+    </div>
+  </section>
 
-    <h3>Request Details:</h3>
-    <ul>
-      <li>Positions / roles to be filled</li>
-      <li>Salary / compensation × role × hour × month × project</li>
-      <li>Temporary positions</li>
-      <li>Permanent staff</li>
-      <li>Specialists required</li>
-      <li>Project start date</li>
-      <li>Project end date</li>
-      <li>Any additional relevant details</li>
-    </ul>
+  <!-- Main content -->
+  <main class="container mx-auto px-4 py-6 grid gap-6 md:grid-cols-2">
+    <!-- Block 1: Submit Request -->
+    <div class="bg-gray-800 rounded-2xl shadow-lg p-6">
+      <h2 class="text-xl font-bold text-yellow-400 mb-4">📋 Submit Your Request</h2>
+      <p class="text-gray-300 mb-4">
+        Send us your request with as much detail as possible, and we will quickly connect you with the most suitable professionals for your project.
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-300 text-sm">
+        <li>Positions / roles to be filled</li>
+        <li>Salary / compensation × role × hour × month × project</li>
+        <li>Temporary positions</li>
+        <li>Permanent staff</li>
+        <li>Specialists required</li>
+        <li>Project start date</li>
+        <li>Project completion date</li>
+        <li>Any additional relevant details</li>
+      </ul>
+    </div>
 
-    <a href="mailto:contact@streamingcasting.com" class="button">📩 Write to Us</a>
-    <a href="https://chat.whatsapp.com/" target="_blank" class="button">📲 Join WhatsApp Group</a>
+    <!-- Block 2: Key Info -->
+    <div class="bg-gray-800 rounded-2xl shadow-lg p-6">
+      <h2 class="text-xl font-bold text-yellow-400 mb-4">💡 Key Information</h2>
+      <p class="text-gray-300 text-sm leading-relaxed">
+        We specialize in connecting <span class="font-semibold">hiring companies</span> and 
+        <span class="font-semibold">production houses</span> with top-tier professionals in the streaming industry.
+      </p>
+      <p class="text-gray-300 text-sm mt-3">
+        Whether you need temporary collaborators for a specific project or long-term staff for your company, our network of professionals adapts to your needs.
+      </p>
+    </div>
   </main>
 
-  <footer>
-    &copy; 2025 Streaming Casting. All rights reserved.
+  <!-- Action buttons -->
+  <section class="container mx-auto px-4 py-6 text-center space-x-4">
+    <a href="mailto:contact@streamingcasting.com" 
+       class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded-lg shadow-md inline-block mb-4">
+       📩 Write to Us
+    </a>
+    <a href="https://wa.me/" target="_blank"
+       class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg shadow-md inline-block mb-4">
+       📲 Join WhatsApp Group
+    </a>
+  </section>
+
+  <!-- Community block -->
+  <section class="container mx-auto px-4 py-6">
+    <div class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center">
+      <h2 class="text-xl font-bold text-yellow-400 mb-4">🌐 Stay Connected</h2>
+      <p class="text-gray-300 mb-4">
+        Keep up to date with the latest news, opportunities, and projects by joining our official community.
+      </p>
+      <a href="https://chat.whatsapp.com/XXXXXXXXXXXX" target="_blank" rel="noopener" 
+         class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg shadow-md inline-block">
+         👉 Join the Streaming Casting WhatsApp Group
+      </a>
+    </div>
+  </section>
+
+  <!-- Back to home -->
+  <footer class="bg-gray-800 py-6 text-center">
+    <a href="index.html" class="text-orange-500 hover:underline">⬅ Back to Home</a>
   </footer>
 </body>
 </html>
