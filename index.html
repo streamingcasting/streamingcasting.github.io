@@ -59,7 +59,6 @@
 
     main{padding:18px}
 
-    /* CONNECTIONS block (centered stars + phrase) */
     .connections{max-width:900px;margin:12px auto 20px;padding:10px 12px;text-align:center}
     .connections .stars{color:var(--yellow);font-size:1.4rem;line-height:1;margin:6px 0}
     .connections .phrase{color:#fff;font-size:1.05rem;margin:6px 0;padding:0 10px}
@@ -77,7 +76,6 @@
     ul {list-style:none;padding:0;margin:6px 0}
     ul li{margin:8px 0;text-align:left}
 
-    /* small screens */
     @media (max-width:520px){
       header h1{font-size:1.5rem}
       .carousel{height:200px}
@@ -90,74 +88,72 @@
 </head>
 <body>
   <header>
-    <!-- brand fixed (no traducir) -->
     <h1><span translate="no">★ Streaming casting ★</span></h1>
-    <!-- approved slogan only -->
     <p>Your bridge to success in the world of streaming</p>
   </header>
 
   <!-- Carousel -->
-  <div class="carousel" aria-hidden="false">
-    <div class="slide active" style="background-image:url('banner1.jpg')" role="img" aria-label="Professional streaming with cameras and production"></div>
-    <div class="slide" style="background-image:url('banner2.jpg')" role="img" aria-label="Creative talents working on streaming"></div>
-    <div class="slide" style="background-image:url('banner3.jpg')" role="img" aria-label="Audiovisual production in action"></div>
+  <div class="carousel">
+    <div class="slide active" style="background-image:url('banner1.jpg')" aria-label="Professional streaming with cameras and production"></div>
+    <div class="slide" style="background-image:url('banner2.jpg')" aria-label="Creative talents working on streaming"></div>
+    <div class="slide" style="background-image:url('banner3.jpg')" aria-label="Audiovisual production in action"></div>
   </div>
 
-  <!-- CONNECTIONS centered block (stars + phrase) -->
-  <div class="connections" role="note" aria-label="Strategic connections">
-    <div class="stars" aria-hidden="true">★★★★★</div>
+  <!-- Connections -->
+  <div class="connections">
+    <div class="stars">★★★★★</div>
     <div class="phrase">We create strategic connections for the execution of professional streaming projects</div>
-    <div class="stars" aria-hidden="true">★★★★★</div>
+    <div class="stars">★★★★★</div>
   </div>
 
   <main>
-    <!-- Professionals block -->
-    <a href="profesionales.html" class="cta" role="link" aria-label="Streaming professionals">
-      <h2 class="highlight-title">Streaming professionals</h2>
+    <!-- Talents & Jobs -->
+    <a href="profesionales.html" class="cta">
+      <h2 class="highlight-title">Talents & Jobs 🎤</h2>
       <h3 class="sub-orange">Open call</h3>
       <p>If you are a streamer, cameraman, video editor, sound engineer, graphic designer, scenographer, or other streaming professional, join here.</p>
     </a>
 
-    <!-- Companies block -->
-    <a href="empresas.html" class="cta" role="link" aria-label="Production companies and recruiters">
-      <h2 class="highlight-title">Production companies & hiring businesses</h2>
+    <!-- Hiring & Producers -->
+    <a href="empresas.html" class="cta">
+      <h2 class="highlight-title">Hiring & Producers 🎬</h2>
       <p>Looking for streaming professionals and teams?</p>
       <p>Find qualified talent here.</p>
     </a>
 
-    <!-- Indie block -->
-    <a href="indie.html" class="cta" role="link" aria-label="Independent streaming professionals">
-      <h2 class="highlight-title">Indie</h2>
+    <!-- Indies & Alliances -->
+    <a href="indie.html" class="cta">
+      <h2 class="highlight-title">Indies & Alliances 🚀</h2>
       <h3 class="sub-orange">Independent streaming professionals</h3>
       <p>Are you looking for collaborators for your projects or to join third-party projects? This is your space.</p>
     </a>
 
-    <!-- Partners block -->
-    <a href="streamingcasting.html" class="cta" role="link" aria-label="Join the project - partners">
-      <h2 class="highlight-title">Join the project 🏗️</h2>
+    <!-- Partners & Crew -->
+    <a href="streamingcasting.html" class="cta">
+      <h2 class="highlight-title">Partners & Crew 🤝</h2>
       <h3 class="sub-orange"><span translate="no">Streaming casting</span></h3>
       <p>We invite independent streaming professionals, investors, and companies to collaborate in the development of the active project <strong translate="no">Streaming casting</strong>.</p>
-      <p style="color:#00aaff;font-weight:bold">Become a partner</p>
+      <p style="color:#00aaff;font-weight:bold">Join us</p>
     </a>
   </main>
 
-    <!-- Coming soon -->
-    <a href="next.html" class="coming-soon" role="link" aria-label="Coming soon">
-      <h3 class="sub-orange">📣 Coming soon...</h3>
-      <p>Self-managed profiles for:</p>
-      <ul style="max-width:500px;margin:0 auto">
-        <li><strong>Talents:</strong> Streaming professionals seeking job opportunities</li>
-        <li><strong>Recruiters:</strong> Production companies and businesses hiring streaming professionals</li>
-        <li><strong>Indies:</strong> Independent professionals looking for strategic partnerships or freelance collaborations</li>
-      </ul>
-    </a>
+  <!-- News & Updates -->
+  <a href="next.html" class="coming-soon">
+    <h2 class="highlight-title">News & Updates 📰</h2>
+    <h3 class="sub-orange">📣 Coming soon...</h3>
+    <p>Self-managed profiles for:</p>
+    <ul style="max-width:500px;margin:0 auto">
+      <li><strong>Talents:</strong> Streaming professionals seeking job opportunities</li>
+      <li><strong>Recruiters:</strong> Production companies and businesses hiring streaming professionals</li>
+      <li><strong>Indies:</strong> Independent professionals looking for strategic partnerships or freelance collaborations</li>
+    </ul>
+  </a>
 
-    <footer>
+  <footer>
     <p>📲 <a href="https://wa.me/549XXXXXXXXXX" target="_blank" rel="noopener">Contact us on WhatsApp</a></p>
   </footer>
 
   <script>
-    // simple carousel rotation
     const slides = document.querySelectorAll('.slide');
     let index = 0;
     function showSlide(){
@@ -167,4 +163,4 @@
     setInterval(showSlide, 3000);
   </script>
 </body>
-        </html>
+</html>
