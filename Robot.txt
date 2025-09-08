@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /README.md
+Disallow: /CNAME
+
+Allow: /
+
+Sitemap: https://streamingcasting.com/sitemap.xml
