@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authorization | Streaming Casting</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Header -->
+  <header class="bg-gray-800 shadow-lg">
+    <div class="container mx-auto px-4 py-6 text-center">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-yellow-400">Authorization Form</h1>
+      <p class="text-lg md:text-xl text-orange-500 mt-2">Legal Consent for Audiovisual Material</p>
+    </div>
+  </header>
+
+  <!-- Authorization text -->
+  <section class="container mx-auto px-4 py-8">
+    <div class="bg-gray-800 rounded-2xl shadow-lg p-6 space-y-4">
+      <h2 class="text-2xl font-bold text-yellow-400 mb-4">📜 Authorization for Use of Audiovisual Material</h2>
+      <p>By checking the box and submitting this form, I expressly authorize <span class="font-semibold text-yellow-400">StreamingCasting</span> to:</p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-300">
+        <li>Publish and share my audiovisual material (demos, videos, presentations, etc.) on:
+          <ul class="list-disc pl-6 text-sm">
+            <li>The official website streamingcasting.com</li>
+            <li>Social networks and official channels</li>
+            <li>StreamingCasting’s news section</li>
+            <li>With potential employers, contractors, and producers</li>
+          </ul>
+        </li>
+        <li>Store and manage my data and material for promotion, casting, and professional opportunities.</li>
+        <li>Use my name and image in connection with my audiovisual material, respecting my authorship.</li>
+      </ul>
+
+      <p class="text-gray-300">I understand and accept that:</p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-300">
+        <li>This authorization is free of charge and has no expiration unless I request withdrawal in writing.</li>
+        <li>I can request removal of my material at any time by emailing <span class="font-semibold">legal@streamingcasting.com</span>.</li>
+        <li>StreamingCasting will not sell my material, only use it for promotion and professional connections.</li>
+      </ul>
+
+      <p class="mt-4 font-semibold text-yellow-400">☑️ I declare that I have read and understood the above terms and voluntarily authorize StreamingCasting to use my material.</p>
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section class="container mx-auto px-4 py-8">
+    <form action="https://formspree.io/f/TU-ENDPOINT" method="POST" class="bg-gray-800 rounded-2xl shadow-lg p-6 space-y-4">
+      
+      <!-- Full name -->
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-300">Full Name</label>
+        <input type="text" name="name" id="name" required
+               class="mt-1 block w-full rounded-lg border-gray-600 bg-gray-700 text-white p-2 focus:ring-yellow-400 focus:border-yellow-400">
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+        <input type="email" name="email" id="email" required
+               class="mt-1 block w-full rounded-lg border-gray-600 bg-gray-700 text-white p-2 focus:ring-yellow-400 focus:border-yellow-400">
+      </div>
+
+      <!-- Checkbox -->
+      <div class="flex items-center">
+        <input id="consent" name="consent" type="checkbox" required
+               class="h-4 w-4 text-yellow-400 border-gray-600 rounded">
+        <label for="consent" class="ml-2 block text-sm text-gray-300">
+          I have read and accept the terms of authorization
+        </label>
+      </div>
+
+      <!-- Submit -->
+      <div class="text-center">
+        <button type="submit" 
+                class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-lg shadow-md">
+          ✅ Submit Authorization
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Back to professionals -->
+  <footer class="bg-gray-800 py-6 text-center">
+    <a href="profesionales.html" class="text-orange-500 hover:underline">⬅ Back to Professionals Page</a>
+  </footer>
+
+</body>
+</html>
