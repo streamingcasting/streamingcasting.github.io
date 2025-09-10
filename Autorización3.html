@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authorization Form | Streaming Casting</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Header -->
+  <header class="bg-gray-800 shadow-lg">
+    <div class="container mx-auto px-4 py-6 text-center">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-yellow-400">Authorization Form</h1>
+      <p class="text-lg md:text-xl text-orange-500 mt-2">Consent to Share Your Demo</p>
+    </div>
+  </header>
+
+  <!-- Form -->
+  <section class="container mx-auto px-4 py-10">
+    <div class="bg-gray-800 rounded-2xl shadow-lg p-6 max-w-2xl mx-auto">
+      <p class="text-gray-300 mb-6 text-sm">
+        By completing this form, you authorize <span class="font-bold text-yellow-400">StreamingCasting.com</span> 
+        to publish your demo on its website, news section, social networks, and share it with potential employers, contractors, and producers.
+      </p>
+
+      <!-- Formspree integration -->
+      <form action="https://formspree.io/f/TU-ENDPOINT" method="POST" class="space-y-4">
+        <!-- Full name -->
+        <div>
+          <label for="name" class="block mb-1 text-sm font-medium">Full Name *</label>
+          <input type="text" id="name" name="name" required
+                 class="w-full p-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400">
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block mb-1 text-sm font-medium">Email *</label>
+          <input type="email" id="email" name="_replyto" required
+                 class="w-full p-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400">
+        </div>
+
+        <!-- Checkbox for consent -->
+        <div class="flex items-start">
+          <input type="checkbox" id="consent" name="consent" required
+                 class="mt-1 mr-2 h-4 w-4 text-yellow-400 focus:ring-yellow-400 border-gray-300 rounded">
+          <label for="consent" class="text-sm text-gray-300">
+            I authorize StreamingCasting.com to publish and share my demo for professional purposes.
+          </label>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit"
+                class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-lg shadow-md w-full">
+          ✅ Submit Authorization
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Back to Home -->
+  <footer class="bg-gray-800 py-6 text-center">
+    <a href="index.html" class="text-orange-500 hover:underline">⬅ Back to Home</a>
+  </footer>
+</body>
+</html>
